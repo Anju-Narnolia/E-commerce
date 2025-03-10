@@ -1,0 +1,19 @@
+@import "tailwindcss";
+.slider-bg1 {
+  background-image: url("./assets/img/slider-1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+.slider-bg2 {
+  background-image: url("./assets/img/slider-2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+.slider-bg3 {
+  background-image: url("./assets/img/slider-3.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
