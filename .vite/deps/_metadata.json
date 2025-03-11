@@ -1,0 +1,40 @@
+{
+  "hash": "b59e43b6",
+  "configHash": "f6af713b",
+  "lockfileHash": "dff9b9e7",
+  "browserHash": "5940f681",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "4b7c8a5b",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "10fb49c1",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "507708db",
+      "needsInterop": false
+    },
+    "react-slick": {
+      "src": "../../node_modules/react-slick/lib/index.js",
+      "file": "react-slick.js",
+      "fileHash": "1d0ae43d",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-HMVW6OXY": {
+      "file": "chunk-HMVW6OXY.js"
+    },
+    "chunk-UCZTVSZO": {
+      "file": "chunk-UCZTVSZO.js"
+    }
+  }
+}
