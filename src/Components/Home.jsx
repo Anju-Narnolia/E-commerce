@@ -8,9 +8,8 @@ function Home() {
   const adv = new URL("../assets/img/ad-min.jpg", import.meta.url).href;
   const bn1 = new URL("../assets/img/cta_bg-min.jpg", import.meta.url).href;
   // const bn2 = new URL("../assets/img/ad-min.jpg", import.meta.url).href;
-  const settings = {
+  const settings1 = {
     dots: true,
-    // fade: true,÷
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -19,10 +18,107 @@ function Home() {
     autoplaySpeed: 2000,
     cssEase: "linear",
   };
+  var settings2 = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 1000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <>
       <Hero />
-      <div className=" flex   justify-between items-center mt-36 m-10 px-20">
+      {/* types of product */}
+      <div className="slider-container m-10 px-20 pt-10 ">
+        <Slider {...settings2}>
+          <div className="relative  border-2 border-gray-800">
+            <img src={`/1-min-300x300.jpg`} alt="type1" />
+            <div className="top-4/5 absolute">
+              <p className="text-red-800 font-bold text-2xl text-center translate-x-1/2">
+                Casual Shoes
+              </p>
+              <p className="text-center translate-x-1/2"> 20 Product</p>
+            </div>
+          </div>
+          <div className="relative  border-2 border-gray-500">
+            <img src={`/3-min-1-300x300.jpg`} alt="type1" />
+            <div className="top-4/5 absolute">
+              <p className="text-red-800 font-bold text-2xl text-center translate-x-1/2">
+                Formal Shoes
+              </p>
+              <p className="text-center translate-x-1/2"> 20 Product</p>
+            </div>
+          </div>
+          <div className="relative  border-2 border-gray-500">
+            <img src={`/4-min-300x300.jpg`} alt="type1" />
+            <div className="top-4/5 absolute">
+              <p className="text-red-800 font-bold text-2xl text-center translate-x-1/2">
+                Sports & Athletic Shoes
+              </p>
+              <p className="text-center translate-x-1/2"> 20 Product</p>
+            </div>
+          </div>
+          <div className="relative  border-2 border-gray-500">
+            <img src={`/5-min-300x300.jpg`} alt="type1" />
+            <div className="top-4/5 absolute">
+              <p className="text-red-800 font-bold text-2xl text-center translate-x-1/2">
+                Boots
+              </p>
+              <p className="text-center translate-x-1/2"> 20 Product</p>
+            </div>
+          </div>
+          <div className="relative  border-2 border-gray-500">
+            <img src={`/5-min-300x300.jpg`} alt="type1" />
+            <div className="top-4/5 absolute">
+              <p className="text-red-800 font-bold text-2xl text-center translate-x-1/2">
+                Traditional & Cultural Shoes
+              </p>
+              <p className="text-center translate-x-1/2"> 20 Product</p>
+            </div>
+          </div>
+          <div className="relative border-2 border-gray-500">
+            <img src={`/6-min-300x300.jpg`} alt="type1" />
+            <div className="top-4/5 absolute ">
+              <p className="text-red-800 font-bold text-2xl text-center translate-x-1/2">
+                Women’s Special Shoes
+              </p>
+              <p className="text-center translate-x-1/2"> 20 Product</p>
+            </div>
+          </div>
+        </Slider>
+      </div>
+      {/* two Products */}
+      <div className=" flex justify-between items-center mt-36 m-10 px-20">
         <img src={img1} alt="feature" className="cursor-pointer" />
         <img src={img2} alt="feature" className="cursor-pointer" />
       </div>
@@ -228,9 +324,9 @@ function Home() {
       </div>
       {/*  */}
       <div className="slider-container">
-        <Slider {...settings}>
+        <Slider {...settings1} className="gap-5 flex">
           <div className="relative">
-            <img src={bn1} alt="hi" class="w-full h-auto" />{" "}
+            <img src={bn1} alt="hi" className="w-full h-auto" />{" "}
             <div class="absolute slide-up top-1/2 left-2/3 transform -translate-x-1/2 -translate-y-1/2">
               <p className="text-4xl text-white">Limited-Time Offer!</p>
               <span className="text-gray-700 text-xl">
@@ -240,7 +336,10 @@ function Home() {
                 <p className="text-red-400 line-through">200$</p>
                 <p className="text-red-800 ">100$</p>
               </div>
-              <button className="bg-red-700">Shop Now</button>
+              <button className="bg-red-700 text-white px-4 py-2 rounded-md hover:bg-red-800 transition">
+                Shop Now
+              </button>
+
               <button className="bg-white">View Collection</button>
             </div>
           </div>
@@ -275,6 +374,16 @@ function Home() {
             </div>
           </div>
         </Slider>
+      </div>
+      <div className="m-10 px-20 pt-10">
+        <p className="text-4xl p-2">Top Brands</p>
+        <div className="flex gap-16 justify-center items-center">
+          <img src={`/public/b1-min.png`} alt="img" className="w-64"/>
+          <img src={`/public/b2-min-1 (1).png`} alt="img"className="w-64"/>
+          <img src={`/public/b3-min.png`} alt="img"className="w-64"/>
+          <img src={`/public/b4-min.png`} alt="img"className="w-64"/>
+          <img src={`/public/b5-min.png`} alt="img"className="w-64"/>
+        </div>
       </div>
     </>
   );
