@@ -1,19 +1,19 @@
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
+import Footer from "./Components/Footer";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import React from "react";
 
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
       <Navbar />
-      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/shop" element={<Shop />} /> */}
         </Routes>
-      </Router>
+      <Footer />
     </>
   );
 }

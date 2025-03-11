@@ -7,25 +7,25 @@
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "4b7c8a5b",
+      "fileHash": "854f4933",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "10fb49c1",
+      "fileHash": "f23b3bde",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "507708db",
+      "fileHash": "ef690c77",
       "needsInterop": false
     },
     "react-slick": {
       "src": "../../node_modules/react-slick/lib/index.js",
       "file": "react-slick.js",
-      "fileHash": "1d0ae43d",
+      "fileHash": "a85fd259",
       "needsInterop": true
     }
   },
