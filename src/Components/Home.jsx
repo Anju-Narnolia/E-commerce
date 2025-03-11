@@ -1,15 +1,28 @@
 import Hero from "./Hero";
+import Slider from "react-slick";
 function Home() {
   const img1 = new URL("../assets/img/feature1-min-1.jpg", import.meta.url)
     .href;
   const img2 = new URL("../assets/img/feature2-min-1.jpg", import.meta.url)
     .href;
   const adv = new URL("../assets/img/ad-min.jpg", import.meta.url).href;
-
+  const bn1 = new URL("../assets/img/cta_bg-min.jpg", import.meta.url).href;
+  // const bn2 = new URL("../assets/img/ad-min.jpg", import.meta.url).href;
+  const settings = {
+    dots: true,
+    // fade: true,÷
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+  };
   return (
     <>
       <Hero />
-      <div className=" flex px-16  justify-between items-center mt-36 m-10 px-20">
+      <div className=" flex   justify-between items-center mt-36 m-10 px-20">
         <img src={img1} alt="feature" className="cursor-pointer" />
         <img src={img2} alt="feature" className="cursor-pointer" />
       </div>
@@ -213,7 +226,56 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* banner */}
+      {/*  */}
+      <div className="slider-container">
+        <Slider {...settings}>
+          <div className="relative">
+            <img src={bn1} alt="hi" class="w-full h-auto" />{" "}
+            <div class="absolute slide-up top-1/2 left-2/3 transform -translate-x-1/2 -translate-y-1/2">
+              <p className="text-4xl text-white">Limited-Time Offer!</p>
+              <span className="text-gray-700 text-xl">
+                Get 50% OFF on our latest collection. Hurry, offer ends soon!
+              </span>
+              <div className="flex gap-3">
+                <p className="text-red-400 line-through">200$</p>
+                <p className="text-red-800 ">100$</p>
+              </div>
+              <button className="bg-red-700">Shop Now</button>
+              <button className="bg-white">View Collection</button>
+            </div>
+          </div>
+          <div className="relative">
+            <img src={bn1} alt="hi" class="w-full h-auto" />{" "}
+            <div class="absolute slide-up top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <p className="text-4xl text-white">Limited-Time Offer!</p>
+              <span className="text-gray-700 text-xl">
+                Get 50% OFF on our latest collection. Hurry, offer ends soon!
+              </span>
+              <div className="flex gap-3">
+                <p className="text-red-400 line-through">200$</p>
+                <p className="text-red-800 ">100$</p>
+              </div>
+              <button className="bg-red-700">Shop Now</button>
+              <button className="bg-white">View Collection</button>
+            </div>
+          </div>
+          <div className="relative">
+            <img src={bn1} alt="hi" class="w-full h-auto" />{" "}
+            <div class="absolute slide-up top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <p className="text-4xl text-white">Limited-Time Offer!</p>
+              <span className="text-gray-700 text-xl">
+                Get 50% OFF on our latest collection. Hurry, offer ends soon!
+              </span>
+              <div className="flex gap-3">
+                <p className="text-red-400 line-through">200$</p>
+                <p className="text-red-800 ">100$</p>
+              </div>
+              <button className="bg-red-700">Shop Now</button>
+              <button className="bg-white">View Collection</button>
+            </div>
+          </div>
+        </Slider>
+      </div>
     </>
   );
 }
