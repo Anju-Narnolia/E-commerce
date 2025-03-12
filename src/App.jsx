@@ -1,6 +1,9 @@
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
-import Footer from "./Components/Footer";
+import About from "./Components/About";
+import FAQ from "./Components/FAQ";
+import Contact from "./Components/Contact";
+import  Footer from "./Components/Footer";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React from "react";
 
@@ -10,9 +13,12 @@ function App() {
   return (
     <>
       <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
     </>
   );
