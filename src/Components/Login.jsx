@@ -1,9 +1,13 @@
 import { useState } from "react";
-import { auth } from "../firebase"; // Import Firebase auth
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "./Firebase"; // Import Firebase auth
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
 
-function Login(){
+function Login() {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(true); // Toggle between login/signup
   const [error, setError] = useState("");
@@ -18,6 +22,8 @@ function Login(){
         alert("Logged in successfully!");
       } else {
         await createUserWithEmailAndPassword(auth, email, password);
+        const user = auth.currentUser;
+        console.log(user);
         alert("Account created successfully!");
       }
     } catch (err) {
@@ -35,6 +41,15 @@ function Login(){
         {error && <p className="text-red-500 text-center mt-2">{error}</p>}
 
         <form onSubmit={handleAuth} className="mt-4">
+         {!isLogin && <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            className="w-full p-2 border rounded mb-3"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />}
           <input
             type="email"
             id="email"
@@ -56,7 +71,7 @@ function Login(){
           <button
             type="submit"
             id="submit"
-            className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="w-full p-2 bg-red-800 text-white rounded hover:bg-red-950"
           >
             {isLogin ? "Login" : "Sign Up"}
           </button>
@@ -65,7 +80,7 @@ function Login(){
         <p className="text-center mt-4">
           {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
           <span
-            className="text-blue-500 cursor-pointer"
+            className="text-red-800 cursor-pointer hover:underline"
             onClick={() => setIsLogin(!isLogin)}
           >
             {isLogin ? "Sign Up" : "Login"}
@@ -74,6 +89,6 @@ function Login(){
       </div>
     </div>
   );
-};
+}
 
 export default Login;

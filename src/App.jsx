@@ -6,7 +6,7 @@ import Login from "./Components/Login";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import TandC from "./Components/TandC";
-import PrivacyPolicy from "./Components//PrivacyPolicy";
+import PrivacyPolicy from "./Components/PrivacyPolicy";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React from "react";
 
@@ -29,6 +29,5 @@ function App() {
     </>
   );
 }
-// privacy-policy/
 
 export default App;
