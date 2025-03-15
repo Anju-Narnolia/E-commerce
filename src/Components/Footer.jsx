@@ -113,13 +113,13 @@ function Footer() {
           © 2025 YourBrand. All rights reserved.
         </p>
         <p className="text-white flex gap-2">
-          <a href="/terms" className="hover:text-white text-blue-400">
+          <Link to="/tandc" className="hover:text-white text-blue-400">
             Terms & Conditions
-          </a>
+          </Link>
           |
-          <a href="/privacy" className="hover:text-white text-blue-400">
+          <Link to="/privacy-policy" className="hover:text-white text-blue-400">
             Privacy Policy
-          </a>
+          </Link>
         </p>
       </div>
     </div>

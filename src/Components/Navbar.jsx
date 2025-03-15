@@ -18,7 +18,7 @@ function Navbar() {
           </div>
         </div>
         <div className="flex justify-center px-5 item-center">
-          <a href="/"> Login</a>
+          <Link to="/login"> Login</Link>
         </div>
       </div>
       <div className=" flex justify-between p-5">

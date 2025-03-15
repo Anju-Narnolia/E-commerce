@@ -15,13 +15,13 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
-      <h2 className="text-3xl font-semibold text-center mb-6">Contact Us</h2>
-      <p className="text-gray-600 text-center mb-4">
+    <div className="m-10 px-20 p-10">
+      <h2 className="text-5xl font-bold text-center mb-6">Contact Us</h2>
+      <p className="text-gray-600 text-center mb-4 text-xl">
         Have questions? Send us a message and we'll get back to you soon.
       </p>
 
-      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6 space-y-4">
+      <form onSubmit={handleSubmit} className=" p-6 space-y-4">
         <div>
           <label className="block text-gray-700 font-medium">Name</label>
           <input
@@ -30,7 +30,7 @@ export default function ContactUs() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-300"
+            className="w-full px-6 py-4 border bg-gray-100 rounded-md focus:ring focus:ring-blue-300"
             placeholder="Enter your name"
           />
         </div>
@@ -43,7 +43,7 @@ export default function ContactUs() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-300"
+            className="w-full px-6 py-4 bg-gray-100 border rounded-md focus:ring focus:ring-blue-300"
             placeholder="Enter your email"
           />
         </div>
@@ -55,7 +55,7 @@ export default function ContactUs() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-300"
+            className="w-full px-6 py-4 bg-gray-100 border rounded-md focus:ring focus:ring-blue-300"
             rows="4"
             placeholder="Write your message here..."
           ></textarea>
@@ -63,7 +63,7 @@ export default function ContactUs() {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+          className="w-full bg-red-800 text-white py-2 hover:border-red-800 border-2 rounded-md hover:bg-white hover:text-red-800 transition"
         >
           Send Message
         </button>
