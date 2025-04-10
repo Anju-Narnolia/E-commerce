@@ -19,10 +19,12 @@ function Login() {
     try {
       if (isLogin) {
         await signInWithEmailAndPassword(auth, email, password);
+        window.location.href = "/";
         alert("Logged in successfully!");
       } else {
         await createUserWithEmailAndPassword(auth, email, password);
         const user = auth.currentUser;
+        window.location.href = "/";
         console.log(user);
         alert("Account created successfully!");
       }

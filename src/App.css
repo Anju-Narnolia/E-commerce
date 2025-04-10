@@ -1,5 +1,5 @@
 @import "tailwindcss";
-.slider-bg1 {
+/* .slider-bg1 {
   background-image: url("./assets/img/slider-1.jpg");
   background-size: cover;
   background-position: center;
@@ -74,4 +74,4 @@
     transform: translateX(0);
     opacity: 1;
   }
-} */
+} */ 
